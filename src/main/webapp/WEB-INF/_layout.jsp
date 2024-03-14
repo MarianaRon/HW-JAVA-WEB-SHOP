@@ -30,7 +30,7 @@
             <a href="<%=context%>/" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="<%=context%>/cart"><i class="material-icons prefix">shopping_cart</i></a></li>
-                <li><a class="btn-floating btn-large red pulse" href="<%=context%>/action"> <i class="Large material-icons">format_shapes</i></a></li>
+                <li><a class="btn-floating btn-large red pulse" href="<%=context%>/action"> <i class="material-icons">percent</i></a></li>
                 <li><a href="collapsible.html">JavaScript</a></li>
             </ul>
         </div>
