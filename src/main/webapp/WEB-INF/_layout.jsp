@@ -27,11 +27,12 @@
 <header>
     <nav>
         <div class="nav-wrapper #880e4f pink darken-4">
-            <a href="<%=context%>/" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="<%=context%>/" class="brand-logo left">Logo</a>
+            <ul id="nav-mobile" class="right ">
                 <li><a href="<%=context%>/cart"><i class="material-icons prefix">shopping_cart</i></a></li>
+                <li><a href="<%=context%>/add-product"><i class="material-icons">add_shopping_cart</i></a></li>
                 <li><a class="btn-floating btn-large red pulse" href="<%=context%>/action"> <i class="material-icons">percent</i></a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+                <li><a href="<%=context%>/signup"><i class="material-icons">person_add</i></a></li>
             </ul>
         </div>
     </nav>
