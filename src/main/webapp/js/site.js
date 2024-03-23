@@ -95,16 +95,6 @@ function addProductButtonClick(e){
         categoryInput.classList.add("valid");
     }
 
-    if( typeInput.value == "" ) {
-        typeInput.classList.remove("valid");
-        typeInput.classList.add("invalid");
-        isFormValid = false ;
-    }
-    else {
-        typeInput.classList.remove("invalid");
-        typeInput.classList.add("valid");
-    }
-
     if( photoInput.value == "" ) {
         photoInput.classList.remove("valid");
         photoInput.classList.add("invalid");
@@ -123,9 +113,6 @@ function addProductButtonClick(e){
     formData.append( "product-name", nameInput.value ) ;
     formData.append( "product-brand", brandInput.value ) ;
     formData.append( "product-category", categoryInput.value ) ;
-    //formData.append( "product-type", typeInput.value ) ;
-    //formData.append( "product-description", descriptionInput.value ) ;
-    //formData.append( "product-count", countInput.value ) ;
     formData.append( "product-price", priceInput.value ) ;
 
     if( photoInput.files.length > 0 ) {
