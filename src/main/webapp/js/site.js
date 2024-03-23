@@ -2,6 +2,9 @@ document.addEventListener( 'DOMContentLoaded', () => {
     // шукаємо кнопку реєстрації, якщо знаходимо - додаємо обробник
     const signupButton = document.getElementById("signup-button");
     if(signupButton) { signupButton.onclick = signupButtonClick; }
+    // шукаємо кнопку збереження товару, якщо знаходимо - додаємо обробник
+    const addProductButton = document.getElementById("add-product-button");
+    if(addProductButton) { addProductButton.onclick = addProductButtonClick; }
     // шукаємо кнопку автентифікації, якщо знаходимо - додаємо обробник
     const authButton = document.getElementById("auth-button");
     if(authButton) { authButton.onclick = authButtonClick; }
@@ -36,7 +39,7 @@ function authButtonClick(e) {
         .then( console.log ) ;
 }
 
-function newProductButtonClick(e){
+function addProductButtonClick(e){
     // шукаємо форму - батьківській елемент кнопки (e.target)
     const productForm = e.target.closest('form') ;
     if( ! productForm ) {
@@ -92,6 +95,16 @@ function newProductButtonClick(e){
         categoryInput.classList.add("valid");
     }
 
+    if( typeInput.value == "" ) {
+        typeInput.classList.remove("valid");
+        typeInput.classList.add("invalid");
+        isFormValid = false ;
+    }
+    else {
+        typeInput.classList.remove("invalid");
+        typeInput.classList.add("valid");
+    }
+
     if( photoInput.value == "" ) {
         photoInput.classList.remove("valid");
         photoInput.classList.add("invalid");
@@ -110,6 +123,9 @@ function newProductButtonClick(e){
     formData.append( "product-name", nameInput.value ) ;
     formData.append( "product-brand", brandInput.value ) ;
     formData.append( "product-category", categoryInput.value ) ;
+    //formData.append( "product-type", typeInput.value ) ;
+    //formData.append( "product-description", descriptionInput.value ) ;
+    //formData.append( "product-count", countInput.value ) ;
     formData.append( "product-price", priceInput.value ) ;
 
     if( photoInput.files.length > 0 ) {

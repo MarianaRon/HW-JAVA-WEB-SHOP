@@ -61,7 +61,7 @@
                       data-success="Правильно">Кількість товару</span>
             </div>
             <div class="input-field col s2">
-                <button type="button" id="new-product-button" class="btn light #880e4f pink darken-4 right"><i class="material-icons left">task_alt</i>Зберігти</button>
+                <button type="button" id="add-product-button" class="btn light #880e4f pink darken-4 right"><i class="material-icons left">task_alt</i>Зберігти</button>
             </div>
         </div>
     </form>
