@@ -2,7 +2,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     // шукаємо кнопку реєстрації, якщо знаходимо - додаємо обробник
     const signupButton = document.getElementById("signup-button");
     if(signupButton) { signupButton.onclick = signupButtonClick; }
-    // шукаємо кнопку збереження товару, якщо знаходимо - додаємо обробник
+    // шукаємо кнопку додавання товару, якщо знаходимо - додаємо обробник
     const addProductButton = document.getElementById("add-product-button");
     if(addProductButton) { addProductButton.onclick = addProductButtonClick; }
     // шукаємо кнопку автентифікації, якщо знаходимо - додаємо обробник
